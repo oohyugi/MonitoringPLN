@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Monitoring TRAFO</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <array name="untukSpinner">
+        <item>Pilihan</item>
+        <item>Kode</item>
+        <item>Feeder</item>
+
+    </array>
+    <array name="untukUser">
+        <item>Pilihan</item>
+        <item>Kode</item>
+        <item>Feeder</item>
+        <item>Persen</item>
+    </array>
+</resources>

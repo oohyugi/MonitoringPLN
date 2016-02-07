@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/user"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_below="@+id/toolbar"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:gravity="center"
+        android:id="@+id/ln1"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="USER LOGIN"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:id="@+id/edUser"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/edPass"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/ln2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln1"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btLogin"
+            android:text="Login"
+            android:layout_toLeftOf="@+id/btKeluar"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btKeluar"
+            android:text="Keluar"
+            android:layout_alignParentRight="true"
+
+            android:textColor="@android:color/holo_red_light"
+            />
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

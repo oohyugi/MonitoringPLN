@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/admin"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <RelativeLayout
+      android:layout_below="@+id/toolbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/rele1"
+      android:background="#ccc">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/edCari"
+        android:hint="Masukan Kata Kunci"
+       android:layout_marginTop="5dp"
+        android:maxLength="16"/>
+      <Spinner
+          android:layout_toRightOf="@+id/edCari"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/spinPilih"
+          android:entries="@array/untukSpinner"
+          android:layout_marginTop="10dp"></Spinner>
+      <ImageButton
+          android:layout_marginTop="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/btCari"
+         android:src="@drawable/ic_search_black_24dp"
+
+          android:layout_alignParentRight="true"/>
+  </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rele1"
+
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/swipeRefres">
+
+    <ListView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listnya"
+        android:divider="@null"
+        />
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:borderWidth="0dp"
+
+        app:elevation="2dp"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

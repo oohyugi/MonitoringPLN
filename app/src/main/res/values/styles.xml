@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Starks" parent="Base.Theme.Starks">
+
+    </style>
+
+    <style name="Base.Theme.Starks" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+    <style name="Theme.Admin" parent="Base.Theme.Starks">
+
+    </style>
+
+    <style name="Base.Theme.Admin" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/admin</item>
+        <item name="colorPrimaryDark">@color/adminDark</item>
+        <item name="colorAccent">@color/accentadmin</item>
+    </style>
+
+</resources>

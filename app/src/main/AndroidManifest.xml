@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yogiputra.com.monitoringpln" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Starks"
+        android:name=".AksesJson">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginAdminActivity"
+            android:label="Login Admin"/>
+        <activity android:name=".LoginUserActivity"
+            android:label="Login User"/>
+        <activity android:name=".LoginOperatorActivity"
+            android:label="Login Operator"/>
+        <activity android:name=".InputOperatorActivity"
+            android:label="Input Operator"/>
+        <activity android:name=".InputAdminActivity"
+            android:label="Input Admin"
+            android:theme="@style/Theme.Admin"/>
+        <activity android:name=".UserActivity"
+            android:label="User"/>
+        <activity android:name=".AdminActivity"
+            android:label="Admin"
+            android:theme="@style/Theme.Admin"/>
+        <activity android:name=".DetailActivity"
+            android:label="Detail"/>
+        <activity android:name=".OperatorActivity"
+            android:label="Operator"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primaryColor"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/toolbar">
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linere01">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edTrafo"
+                android:hint="ID Trafo"
+
+                android:focusableInTouchMode="false"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edFedeer"
+                android:hint="Feeder"
+                android:layout_below="@id/edTrafo"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edLokasi"
+                android:hint="Lokasi"
+                android:layout_below="@+id/edFedeer"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDaya"
+                android:hint="Daya"
+                android:layout_below="@+id/edLokasi"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edPersen"
+                android:hint="Persen"
+                android:layout_below="@+id/edDaya"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/linere01"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="#000"
+            android:id="@+id/garis"
+            />
+
+
+
+        <LinearLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linere2"
+
+            android:orientation="vertical"
+            android:layout_below="@+id/garis">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Induk"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/Induk"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blok1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/BLOK1"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blok2"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/BLOK2"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blok3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/BLOK3"/>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Induk"
+            android:layout_below="@+id/garis"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/rele1"
+            >
+
+            <EditText
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/induk_R"
+                android:layout_toLeftOf="@+id/induk_S"
+                android:maxLength="4"
+                android:focusable="true"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/induk_S"
+                android:layout_toLeftOf="@+id/induk_T"
+                android:maxLength="4"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/induk_T"
+                android:layout_toLeftOf="@+id/induk_N"
+                android:maxLength="4"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/induk_N"
+
+                android:layout_alignParentRight="true"
+                android:maxLength="4"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/BLOK1"
+            android:layout_below="@+id/rele1"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rele2"
+
+            >
+
+            <EditText
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok1_R"
+                android:layout_toLeftOf="@+id/blok1_S"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok1_S"
+                android:layout_toLeftOf="@+id/blok1_T"
+                android:maxLength="4"
+                android:inputType="number"
+               />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok1_T"
+                android:layout_toLeftOf="@+id/blok1_N"
+                android:maxLength="4" />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok1_N"
+                android:layout_alignParentRight="true"
+                android:maxLength="4"
+                android:inputType="number"
+               />
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/BLOK2"
+            android:layout_below="@+id/rele2"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rele3"
+            >
+
+            <EditText
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok2_R"
+                android:layout_toLeftOf="@+id/blok2_S"
+                android:maxLength="4"
+                android:inputType="number"
+
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok2_S"
+              android:layout_toLeftOf="@+id/blok2_T"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok2_T"
+                android:layout_toLeftOf="@+id/blok2_N"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok2_N"
+                android:layout_alignParentRight="true"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/BLOK3"
+            android:layout_below="@+id/rele3"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rele4"
+            >
+
+            <EditText
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok3_R"
+                android:layout_toLeftOf="@+id/blok3_S"
+                android:maxLength="4"
+                android:inputType="number"
+
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok3_S"
+                android:layout_toLeftOf="@+id/blok3_T"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok3_T"
+                android:layout_toLeftOf="@+id/blok3_N"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blok3_N"
+                android:layout_alignParentRight="true"
+                android:maxLength="4"
+                android:inputType="number"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rele4"
+            android:layout_alignParentRight="true"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btSimpan"
+                android:text="SIMPAN"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
